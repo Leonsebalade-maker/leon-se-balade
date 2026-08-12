@@ -1,338 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanderlust Journal — Voyages, Tutos & Avis</title>
-    <meta name="description" content="Blog personnel bilingue dédié aux voyages, tutoriels et avis authentiques. Explorez la nature avec nous.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Léon se balade : carnets de route, voyages en camping-car, idées d'escapades et conseils pratiques.">
+  <title>Léon se balade | Voyages en camping-car</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Léon se balade - Accueil">
+      <span class="brand-mark">L</span>
+      <span><strong>Léon</strong><small>se balade</small></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" class="nav" aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a>
+      <a href="#voyages">Nos voyages</a>
+      <a href="#carnets">Carnets de route</a>
+      <a href="#camping-car">Vie en camping-car</a>
+      <a href="#conseils">Conseils & astuces</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <!-- HEADER -->
-    <header class="header" id="header">
-        <div class="container header-inner">
-            <a href="#hero" class="logo">
-                <span class="logo-icon">🌿</span>
-                <span class="logo-text">Wanderlust <em>Journal</em></span>
-            </a>
-            <nav class="nav" id="nav">
-                <a href="#hero" data-fr="Accueil" data-en="Home">Accueil</a>
-                <a href="#about" data-fr="À propos" data-en="About">À propos</a>
-                <a href="#portfolio" data-fr="Aventures" data-en="Adventures">Aventures</a>
-                <a href="#blog" data-fr="Journal" data-en="Journal">Journal</a>
-                <a href="#testimonials" data-fr="Témoignages" data-en="Reviews">Témoignages</a>
-                <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
-            </nav>
-            <div class="header-actions">
-                <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">
-                    <span class="lang-active">FR</span>
-                    <span class="lang-sep">/</span>
-                    <span class="lang-inactive">EN</span>
-                </button>
-                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+  <main>
+    <section id="accueil" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Voyager • découvrir • raconter</p>
+        <h1>Les souvenirs ont parfois plusieurs vies.</h1>
+        <p class="hero-text">Bienvenue à bord de Léon. Des escapades en camping-car, des carnets de route et des idées pour prendre la route sans forcément aller au bout du monde.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#voyages">Découvrir nos voyages</a>
+          <a class="btn btn-light" href="#apropos">Faire connaissance</a>
         </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero" id="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <span class="hero-eyebrow" data-fr="— Bienvenue dans notre carnet —" data-en="— Welcome to our journal —">— Bienvenue dans notre carnet —</span>
-            <h1 class="hero-title" data-fr="Où la nature<br>rencontre l'aventure" data-en="Where nature<br>meets adventure">Où la nature<br>rencontre l'aventure</h1>
-            <p class="hero-subtitle" data-fr="Voyages · Tutoriels · Avis authentiques" data-en="Travels · Tutorials · Honest reviews">Voyages · Tutoriels · Avis authentiques</p>
-            <div class="hero-cta">
-                <a href="#blog" class="btn btn-primary" data-fr="Découvrir le journal" data-en="Explore the journal">Découvrir le journal</a>
-                <a href="#about" class="btn btn-ghost" data-fr="Notre histoire" data-en="Our story">Notre histoire</a>
-            </div>
-            <div class="hero-scroll">
-                <span data-fr="Défiler" data-en="Scroll">Défiler</span>
-                <div class="scroll-line"></div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="about section" id="about">
-        <div class="container about-grid">
-            <div class="about-image">
-                <div class="about-photo"></div>
-                <div class="about-badge">
-                    <strong>5+</strong>
-                    <span data-fr="années d'aventures" data-en="years of adventures">années d'aventures</span>
-                </div>
-            </div>
-            <div class="about-content">
-                <span class="section-eyebrow" data-fr="À propos" data-en="About us">À propos</span>
-                <h2 class="section-title" data-fr="Deux âmes vagabondes<br>en quête de nature" data-en="Two wandering souls<br>in search of nature">Deux âmes vagabondes<br>en quête de nature</h2>
-                <p class="section-lead" data-fr="Nous sommes Marie & Julien, un couple passionné de grands espaces, de sentiers oubliés et de rencontres sincères. Depuis 2020, nous partageons ici nos itinéraires, nos tutoriels de photographie et nos avis honnêtes sur le matériel outdoor." data-en="We are Marie & Julien, a couple passionate about wide-open spaces, forgotten trails and genuine encounters. Since 2020, we share here our itineraries, our photography tutorials and honest reviews of outdoor gear.">Nous sommes Marie & Julien, un couple passionné de grands espaces, de sentiers oubliés et de rencontres sincères. Depuis 2020, nous partageons ici nos itinéraires, nos tutoriels de photographie et nos avis honnêtes sur le matériel outdoor.</p>
-                <div class="about-features">
-                    <div class="feature">
-                        <span class="feature-icon">🏔️</span>
-                        <h4 data-fr="Aventures" data-en="Adventures">Aventures</h4>
-                        <p data-fr="Randonnées, road-trips et escapades sauvages." data-en="Hiking, road trips and wild escapes.">Randonnées, road-trips et escapades sauvages.</p>
-                    </div>
-                    <div class="feature">
-                        <span class="feature-icon">📸</span>
-                        <h4 data-fr="Tutoriels" data-en="Tutorials">Tutoriels</h4>
-                        <p data-fr="Photo, préparation d'itinéraire, matériel." data-en="Photography, itinerary planning, gear.">Photo, préparation d'itinéraire, matériel.</p>
-                    </div>
-                    <div class="feature">
-                        <span class="feature-icon">⭐</span>
-                        <h4 data-fr="Avis" data-en="Reviews">Avis</h4>
-                        <p data-fr="Tests honnêtes de nos équipements favoris." data-en="Honest reviews of our favorite gear.">Tests honnêtes de nos équipements favoris.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="intro section">
+      <p class="eyebrow">Bienvenue à bord</p>
+      <h2>Un camping-car, deux curieux et beaucoup de kilomètres</h2>
+      <p>Nous voyageons dès que l'occasion se présente, avec Léon comme maison roulante. Ici, on partage les endroits qui nous ont plu, les petites galères qui font les bonnes histoires et nos trouvailles pour profiter de la route.</p>
     </section>
 
-    <!-- PORTFOLIO / ADVENTURES -->
-    <section class="portfolio section section-alt" id="portfolio">
-        <div class="container">
-            <div class="section-head center">
-                <span class="section-eyebrow" data-fr="Nos aventures" data-en="Our adventures">Nos aventures</span>
-                <h2 class="section-title" data-fr="Chaque voyage<br>raconte une histoire" data-en="Every journey<br>tells a story">Chaque voyage<br>raconte une histoire</h2>
-            </div>
-            <div class="portfolio-filters">
-                <button class="filter active" data-filter="all" data-fr="Tout" data-en="All">Tout</button>
-                <button class="filter" data-filter="travel" data-fr="Voyages" data-en="Travels">Voyages</button>
-                <button class="filter" data-filter="tuto" data-fr="Tutos" data-en="Tutorials">Tutos</button>
-                <button class="filter" data-filter="review" data-fr="Avis" data-en="Reviews">Avis</button>
-            </div>
-            <div class="portfolio-grid">
-                <article class="p-card" data-cat="travel">
-                    <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-body">
-                        <span class="p-tag" data-fr="Voyage" data-en="Travel">Voyage</span>
-                        <h3 data-fr="Les Dolomites en automne" data-en="The Dolomites in autumn">Les Dolomites en automne</h3>
-                    </div>
-                </article>
-                <article class="p-card" data-cat="tuto">
-                    <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-body">
-                        <span class="p-tag" data-fr="Tuto" data-en="Tutorial">Tuto</span>
-                        <h3 data-fr="Photographier le lever du soleil" data-en="Photographing the sunrise">Photographier le lever du soleil</h3>
-                    </div>
-                </article>
-                <article class="p-card" data-cat="review">
-                    <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-body">
-                        <span class="p-tag" data-fr="Avis" data-en="Review">Avis</span>
-                        <h3 data-fr="Test : sac à dos Osprey Atmos" data-en="Review: Osprey Atmos backpack">Test : sac à dos Osprey Atmos</h3>
-                    </div>
-                </article>
-                <article class="p-card" data-cat="travel">
-                    <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-body">
-                        <span class="p-tag" data-fr="Voyage" data-en="Travel">Voyage</span>
-                        <h3 data-fr="Islande, terre de feu et de glace" data-en="Iceland, land of fire and ice">Islande, terre de feu et de glace</h3>
-                    </div>
-                </article>
-                <article class="p-card" data-cat="tuto">
-                    <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1533692328991-08159ff19fca?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-body">
-                        <span class="p-tag" data-fr="Tuto" data-en="Tutorial">Tuto</span>
-                        <h3 data-fr="Préparer son itinéraire de trek" data-en="Planning your trek itinerary">Préparer son itinéraire de trek</h3>
-                    </div>
-                </article>
-                <article class="p-card" data-cat="review">
-                    <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-body">
-                        <span class="p-tag" data-fr="Avis" data-en="Review">Avis</span>
-                        <h3 data-fr="Tente MSR Hubba : notre test" data-en="MSR Hubba tent: our review">Tente MSR Hubba : notre test</h3>
-                    </div>
-                </article>
-                <article class="p-card" data-cat="travel">
-                    <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-body">
-                        <span class="p-tag" data-fr="Voyage" data-en="Travel">Voyage</span>
-                        <h3 data-fr="Patagonie, bout du monde" data-en="Patagonia, end of the world">Patagonie, bout du monde</h3>
-                    </div>
-                </article>
-                <article class="p-card" data-cat="tuto">
-                    <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-body">
-                        <span class="p-tag" data-fr="Tuto" data-en="Tutorial">Tuto</span>
-                        <h3 data-fr="Bivouac responsable : le guide" data-en="Responsible bivouac: the guide">Bivouac responsable : le guide</h3>
-                    </div>
-                </article>
-                <article class="p-card" data-cat="review">
-                    <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1517824806704-9040b037703b?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-body">
-                        <span class="p-tag" data-fr="Avis" data-en="Review">Avis</span>
-                        <h3 data-fr="Chaussures Salomon X Ultra" data-en="Salomon X Ultra shoes">Chaussures Salomon X Ultra</h3>
-                    </div>
-                </article>
-            </div>
-        </div>
+    <section id="voyages" class="section section-tint">
+      <div class="section-heading">
+        <div><p class="eyebrow">Sur la route</p><h2>Nos voyages</h2></div>
+        <p>Quelques idées pour commencer à explorer nos escapades.</p>
+      </div>
+      <div class="cards">
+        <article class="card card-germany">
+          <div class="card-photo"><span>Allemagne</span></div>
+          <div class="card-body">
+            <p class="tag">Road trip</p>
+            <h3>La Route des Contes de Grimm</h3>
+            <p>Villes à colombages, châteaux, légendes et détours imprévus : notre Allemagne en camping-car.</p>
+            <a href="#carnets">Lire le carnet →</a>
+          </div>
+        </article>
+        <article class="card card-scotland">
+          <div class="card-photo"><span>Écosse</span></div>
+          <div class="card-body">
+            <p class="tag">Grand voyage</p>
+            <h3>Cap sur les Highlands</h3>
+            <p>Des paysages immenses, la NC500, l'île de Skye et cette furieuse envie de s'arrêter tous les cinq kilomètres.</p>
+            <a href="#carnets">Lire le carnet →</a>
+          </div>
+        </article>
+        <article class="card card-france">
+          <div class="card-photo"><span>France</span></div>
+          <div class="card-body">
+            <p class="tag">Escapades</p>
+            <h3>La France au rythme de Léon</h3>
+            <p>Alsace, Jura, Bretagne et autres détours : nos idées de balades à garder sous le coude.</p>
+            <a href="#carnets">Explorer →</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- BLOG -->
-    <section class="blog section" id="blog">
-        <div class="container">
-            <div class="section-head center">
-                <span class="section-eyebrow" data-fr="Journal" data-en="Journal">Journal</span>
-                <h2 class="section-title" data-fr="Nos derniers récits" data-en="Our latest stories">Nos derniers récits</h2>
-                <p class="section-lead center" data-fr="Récits de voyage, conseils pratiques et coups de cœur du moment." data-en="Travel stories, practical advice and current favorites.">Récits de voyage, conseils pratiques et coups de cœur du moment.</p>
-            </div>
-            <div class="blog-grid">
-                <article class="b-card b-card-large">
-                    <div class="b-img" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&auto=format&fit=crop&q=80')"></div>
-                    <div class="b-body">
-                        <div class="b-meta">
-                            <span class="b-cat" data-fr="Voyage" data-en="Travel">Voyage</span>
-                            <span class="b-date">12 août 2026</span>
-                        </div>
-                        <h3 data-fr="7 jours au cœur des fjords norvégiens" data-en="7 days in the heart of the Norwegian fjords">7 jours au cœur des fjords norvégiens</h3>
-                        <p data-fr="Un road-trip inoubliable entre montagnes vertigineuses, eaux turquoise et villages de pêcheurs. Notre itinéraire complet, jour par jour." data-en="An unforgettable road trip between towering mountains, turquoise waters and fishing villages. Our complete day-by-day itinerary.">Un road-trip inoubliable entre montagnes vertigineuses, eaux turquoise et villages de pêcheurs. Notre itinéraire complet, jour par jour.</p>
-                        <a href="#" class="read-more" data-fr="Lire l'article →" data-en="Read the article →">Lire l'article →</a>
-                    </div>
-                </article>
-                <article class="b-card">
-                    <div class="b-img" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="b-body">
-                        <div class="b-meta">
-                            <span class="b-cat" data-fr="Tuto" data-en="Tutorial">Tuto</span>
-                            <span class="b-date">28 juil. 2026</span>
-                        </div>
-                        <h3 data-fr="Maîtriser la photo de paysage" data-en="Mastering landscape photography">Maîtriser la photo de paysage</h3>
-                        <a href="#" class="read-more" data-fr="Lire →" data-en="Read →">Lire →</a>
-                    </div>
-                </article>
-                <article class="b-card">
-                    <div class="b-img" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="b-body">
-                        <div class="b-meta">
-                            <span class="b-cat" data-fr="Avis" data-en="Review">Avis</span>
-                            <span class="b-date">15 juil. 2026</span>
-                        </div>
-                        <h3 data-fr="Notre veste imperméable préférée" data-en="Our favorite waterproof jacket">Notre veste imperméable préférée</h3>
-                        <a href="#" class="read-more" data-fr="Lire →" data-en="Read →">Lire →</a>
-                    </div>
-                </article>
-                <article class="b-card">
-                    <div class="b-img" style="background-image:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop&q=80')"></div>
-                    <div class="b-body">
-                        <div class="b-meta">
-                            <span class="b-cat" data-fr="Voyage" data-en="Travel">Voyage</span>
-                            <span class="b-date">02 juil. 2026</span>
-                        </div>
-                        <h3 data-fr="Les Açores hors des sentiers battus" data-en="The Azores off the beaten path">Les Açores hors des sentiers battus</h3>
-                        <a href="#" class="read-more" data-fr="Lire →" data-en="Read →">Lire →</a>
-                    </div>
-                </article>
-            </div>
+    <section id="carnets" class="section">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Carnets de route</p>
+          <h2>Les étapes, les détours… et les imprévus</h2>
+          <p>Nos carnets racontent les voyages comme nous les vivons : où nous nous arrêtons, ce que nous visitons, ce qui vaut vraiment le détour et les petits ratés qu'aucun guide ne prévoit.</p>
+          <a class="text-link" href="#contact">Les carnets arrivent bientôt →</a>
         </div>
+        <div class="quote-card">
+          <span>“</span>
+          <p>Le meilleur itinéraire est parfois celui qu'on modifie en chemin.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials section section-alt" id="testimonials">
-        <div class="container">
-            <div class="section-head center">
-                <span class="section-eyebrow" data-fr="Témoignages" data-en="Testimonials">Témoignages</span>
-                <h2 class="section-title" data-fr="Ils nous suivent<br>dans l'aventure" data-en="They follow us<br>on the adventure">Ils nous suivent<br>dans l'aventure</h2>
-            </div>
-            <div class="testi-grid">
-                <div class="testi">
-                    <div class="stars">★★★★★</div>
-                    <p data-fr="« Grâce à leur itinéraire en Islande, notre voyage a été un rêve éveillé. Des conseils authentiques et pleins de sensibilité. »" data-en="&quot;Thanks to their Iceland itinerary, our trip was a waking dream. Genuine, sensitive advice.&quot;">« Grâce à leur itinéraire en Islande, notre voyage a été un rêve éveillé. Des conseils authentiques et pleins de sensibilité. »</p>
-                    <div class="testi-author">
-                        <div class="testi-avatar" style="background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&auto=format&fit=crop&q=80')"></div>
-                        <div>
-                            <strong>Camille Lefèvre</strong>
-                            <span data-fr="Lyon, France" data-en="Lyon, France">Lyon, France</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi">
-                    <div class="stars">★★★★★</div>
-                    <p data-fr="« Les tutos photo m'ont fait progresser plus qu'une année d'école. Un ton juste, généreux et humble. »" data-en="&quot;Their photo tutorials taught me more than a year of school. A humble, generous and honest tone.&quot;">« Les tutos photo m'ont fait progresser plus qu'une année d'école. Un ton juste, généreux et humble. »</p>
-                    <div class="testi-author">
-                        <div class="testi-avatar" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80')"></div>
-                        <div>
-                            <strong>Thomas Bernard</strong>
-                            <span data-fr="Genève, Suisse" data-en="Geneva, Switzerland">Genève, Suisse</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi">
-                    <div class="stars">★★★★★</div>
-                    <p data-fr="« Leurs avis matériel sont d'une honnêteté rare. J'achète les yeux fermés depuis 2 ans. »" data-en="&quot;Their gear reviews are refreshingly honest. I've been buying with total confidence for 2 years.&quot;">« Leurs avis matériel sont d'une honnêteté rare. J'achète les yeux fermés depuis 2 ans. »</p>
-                    <div class="testi-author">
-                        <div class="testi-avatar" style="background-image:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop&q=80')"></div>
-                        <div>
-                            <strong>Léa Moreau</strong>
-                            <span data-fr="Montréal, Canada" data-en="Montreal, Canada">Montréal, Canada</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="camping-car" class="section section-dark">
+      <div class="section-heading">
+        <div><p class="eyebrow">La vie avec Léon</p><h2>Voyager en camping-car</h2></div>
+      </div>
+      <div class="features">
+        <article><span>01</span><h3>Où dormir ?</h3><p>Aires, campings, spots et nos retours d'expérience sans langue de bois.</p></article>
+        <article><span>02</span><h3>À bord</h3><p>Organisation, équipements et petites habitudes qui rendent le voyage plus simple.</p></article>
+        <article><span>03</span><h3>Sur place</h3><p>À pied, à vélo ou en laissant Léon se reposer : nos façons de découvrir une étape.</p></article>
+      </div>
     </section>
 
-    <!-- CONTACT / NEWSLETTER -->
-    <section class="contact section" id="contact">
-        <div class="container contact-grid">
-            <div class="contact-content">
-                <span class="section-eyebrow" data-fr="Restons en contact" data-en="Stay in touch">Restons en contact</span>
-                <h2 class="section-title" data-fr="Recevez nos récits<br>chaque mois" data-en="Get our stories<br>every month">Recevez nos récits<br>chaque mois</h2>
-                <p class="section-lead" data-fr="Une lettre mensuelle, un récit inédit, des conseils exclusifs et zéro spam. Promis." data-en="A monthly letter, an exclusive story, insider tips and zero spam. Promised.">Une lettre mensuelle, un récit inédit, des conseils exclusifs et zéro spam. Promis.</p>
-                <form class="newsletter">
-                    <input type="email" placeholder="votre@email.com" required>
-                    <button type="submit" class="btn btn-primary" data-fr="S'inscrire" data-en="Subscribe">S'inscrire</button>
-                </form>
-                <div class="socials">
-                    <a href="#" aria-label="Instagram">Instagram</a>
-                    <a href="#" aria-label="Pinterest">Pinterest</a>
-                    <a href="#" aria-label="YouTube">YouTube</a>
-                </div>
-            </div>
-            <div class="contact-image" style="background-image:url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&auto=format&fit=crop&q=80')"></div>
-        </div>
+    <section id="conseils" class="section">
+      <p class="eyebrow">Conseils & astuces</p>
+      <h2>Ce qu'on aurait aimé savoir avant</h2>
+      <div class="tips">
+        <article><strong>Préparer sans tout prévoir</strong><p>Garder une trame, mais laisser assez de place aux coups de cœur.</p></article>
+        <article><strong>Choisir une étape</strong><p>Accès, stationnement, services et distance du centre : nos critères pratiques.</p></article>
+        <article><strong>Voyager connecté</strong><p>Internet, applis utiles et solutions testées sur la route.</p></article>
+        <article><strong>Profiter vraiment</strong><p>Parce qu'un road trip n'est pas une course au nombre de kilomètres.</p></article>
+      </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <span class="logo-icon">🌿</span>
-                <span class="logo-text">Wanderlust <em>Journal</em></span>
-                <p data-fr="Voyages, tutos et avis, avec sincérité." data-en="Travels, tutorials and reviews, with honesty.">Voyages, tutos et avis, avec sincérité.</p>
-            </div>
-            <div class="footer-cols">
-                <div>
-                    <h5 data-fr="Explorer" data-en="Explore">Explorer</h5>
-                    <a href="#hero" data-fr="Accueil" data-en="Home">Accueil</a>
-                    <a href="#portfolio" data-fr="Aventures" data-en="Adventures">Aventures</a>
-                    <a href="#blog" data-fr="Journal" data-en="Journal">Journal</a>
-                </div>
-                <div>
-                    <h5 data-fr="À propos" data-en="About">À propos</h5>
-                    <a href="#about" data-fr="Notre histoire" data-en="Our story">Notre histoire</a>
-                    <a href="#testimonials" data-fr="Témoignages" data-en="Reviews">Témoignages</a>
-                    <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
-                </div>
-                <div>
-                    <h5 data-fr="Suivez-nous" data-en="Follow us">Suivez-nous</h5>
-                    <a href="#">Instagram</a>
-                    <a href="#">Pinterest</a>
-                    <a href="#">YouTube</a>
-                </div>
-            </div>
+    <section id="apropos" class="section section-tint">
+      <div class="about">
+        <div class="leon-illustration" aria-hidden="true">🚐</div>
+        <div>
+          <p class="eyebrow">À propos</p>
+          <h2>Pourquoi « Léon se balade » ?</h2>
+          <p>Derrière Léon se balade, il y a un couple qui aime prendre la route dès qu'il le peut et un camping-car devenu un vrai compagnon de voyage. Pas de course à la performance : on aime les beaux paysages, les villes qui méritent qu'on s'y attarde, les balades à vélo et les découvertes inattendues.</p>
+          <p>Ce site prolonge nos voyages et rassemble les souvenirs, bonnes adresses et expériences que nous partageons au fil de la route.</p>
         </div>
-        <div class="footer-bottom container">
-            <span>© 2026 Wanderlust Journal — <span data-fr="Fait avec 🌱 en France" data-en="Made with 🌱 in France">Fait avec 🌱 en France</span></span>
-        </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="contact" class="section social">
+      <p class="eyebrow">On se retrouve ?</p>
+      <h2>Suivez les aventures de Léon</h2>
+      <p>Les nouvelles étapes, les photos et les petits moments de voyage sont aussi sur nos réseaux.</p>
+      <div class="actions center">
+        <a class="btn btn-primary" href="https://www.instagram.com/leon_se_balade" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-outline" href="https://www.facebook.com/share/186YTNaUfZ/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#accueil"><span class="brand-mark">L</span><span><strong>Léon</strong><small>se balade</small></span></a>
+    <p>Les souvenirs ont parfois plusieurs vies.</p>
+    <p class="copyright">© <span id="year"></span> Léon se balade</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
