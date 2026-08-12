@@ -2,5 +2,8 @@
 @media(max-width:900px){.menu-toggle{display:block}.nav{position:fixed;inset:76px 0 auto 0;background:#f7f3e9;padding:25px;display:none;flex-direction:column;align-items:flex-start;border-bottom:1px solid #d8d2c5}.nav.open{display:flex}.cards,.features{grid-template-columns:1fr}.split,.about{grid-template-columns:1fr}.section-heading{display:block}.section{padding-top:65px;padding-bottom:65px}.leon-illustration{max-width:230px}.tips{grid-template-columns:1fr}}
 @media(max-width:520px){.site-header{height:68px}.nav{inset:68px 0 auto}.hero{min-height:75vh}.hero h1{font-size:45px}.actions{flex-direction:column}.btn{text-align:center;width:100%}.section{padding-left:20px;padding-right:20px}.tips article{padding:24px}footer{display:block;text-align:center}.footer-brand{justify-content:center}footer>p{margin-top:18px}}
 .hero {
-  background-image: url("IMG_4884.png") !important;
+  background-image: url("IMG_4884.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
