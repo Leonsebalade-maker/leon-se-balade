@@ -7,3 +7,17 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-body a {
+  margin-top: auto;
+}
