@@ -34,6 +34,6 @@
     linear-gradient(rgba(45, 55, 40, 0.35), rgba(45, 55, 40, 0.35)),
     url("Allemagne.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 40%;
   background-repeat: no-repeat;
 }
