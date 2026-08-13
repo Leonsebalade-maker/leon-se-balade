@@ -29,3 +29,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.card-germany .card-photo {
+  background-image:
+    linear-gradient(rgba(45, 55, 40, 0.35), rgba(45, 55, 40, 0.35)),
+    url("Allemagne.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
