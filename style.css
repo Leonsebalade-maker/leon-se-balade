@@ -127,3 +127,19 @@
   color: #3f5638;
   margin-top: 24px;
 }
+.leon-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.leon-specs span {
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  background: #e7e1cf;
+  border: 1px solid #c9bea0;
+  border-radius: 30px;
+  color: #2f3b2d;
+}
