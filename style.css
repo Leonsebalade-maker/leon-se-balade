@@ -60,3 +60,6 @@
   object-position: center;
   display: block;
 }
+.leon-illustration {
+  background: none !important;
+}
