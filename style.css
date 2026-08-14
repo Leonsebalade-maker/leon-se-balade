@@ -105,3 +105,10 @@
     width: 100%;
   }
 }
+.signature {
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #3f5638;
+  margin-top: 24px;
+}
