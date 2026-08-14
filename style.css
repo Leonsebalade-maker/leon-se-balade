@@ -57,3 +57,51 @@
 .leon-illustration {
   background: none !important;
 }
+/* À PROPOS : photo à gauche + texte à droite */
+#apropos .about {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Cadre de la photo */
+#apropos .leon-illustration {
+  flex: 0 0 42%;
+  max-width: 460px;
+  padding: 12px;
+  background: #e7e1cf;
+  border: 2px solid #c9bea0;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* Photo carrée */
+#apropos .leon-illustration img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  border: 3px solid #ffffff;
+}
+
+/* Texte à droite */
+#apropos .about > div:last-child {
+  flex: 1;
+}
+
+/* Sur téléphone : photo au-dessus du texte */
+@media (max-width: 768px) {
+  #apropos .about {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  #apropos .leon-illustration {
+    max-width: 100%;
+    width: 100%;
+  }
+}
