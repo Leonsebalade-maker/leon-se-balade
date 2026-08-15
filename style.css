@@ -85,7 +85,7 @@
 
 /* Photo carrée */
 #apropos .leon-illustration img {
-  width: 100%;
+  width: 108%;
   aspect-ratio: 1 / 1;
   height: auto;
   display: block;
