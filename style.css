@@ -292,3 +292,10 @@
     grid-template-columns: 1fr;
   }
 }
+.ou-dormir-intro {
+  padding-bottom: 25px;
+}
+
+.ou-dormir-intro + .section {
+  padding-top: 20px;
+}
