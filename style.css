@@ -162,3 +162,17 @@
     margin-top: 12px;
   }
 }
+.about-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  padding-top: 20px;
+}
+
+.about-logo img {
+  width: 280px;
+  max-width: 70%;
+  height: auto;
+  display: block;
+}
