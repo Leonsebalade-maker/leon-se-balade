@@ -16,6 +16,7 @@ document.querySelectorAll('#menu a').forEach(link => {
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+
 const translations = {
   en: {
     "Accueil": "Home",
@@ -24,36 +25,70 @@ const translations = {
     "Vie en camping-car": "Motorhome life",
     "Conseils & astuces": "Tips & advice",
     "Nous & Léon": "Us & Léon",
-    "Contact": "Contact"
+    "Contact": "Contact",
+
+    "hero-eyebrow": "Travel • discover • share",
+    "hero-title": "Some memories deserve more than one life.",
+    "hero-text": "Welcome aboard Léon. Motorhome getaways, travel journals and ideas for hitting the road — without necessarily going to the ends of the earth.",
+    "hero-travels": "Discover our travels",
+    "hero-meet": "Get to know us"
   }
 };
 
-const originalTexts = new Map();
+const originalMenuTexts = new Map();
 
 document.querySelectorAll('#menu a').forEach(link => {
-  originalTexts.set(link, link.textContent.trim());
+  originalMenuTexts.set(link, link.textContent.trim());
+});
+
+document.querySelectorAll('[data-i18n]').forEach(element => {
+  if (!element.dataset.fr) {
+    element.dataset.fr = element.textContent.trim();
+  }
 });
 
 const langFr = document.querySelector('#lang-fr');
 const langEn = document.querySelector('#lang-en');
 
-langEn.addEventListener('click', () => {
-  document.querySelectorAll('#menu a').forEach(link => {
-    const french = originalTexts.get(link);
-    link.textContent = translations.en[french] || french;
-  });
+function setLanguage(lang) {
+  if (lang === 'en') {
+    document.querySelectorAll('#menu a').forEach(link => {
+      const french = originalMenuTexts.get(link);
+      link.textContent = translations.en[french] || french;
+    });
 
-  document.documentElement.lang = 'en';
-  langEn.classList.add('lang-active');
-  langFr.classList.remove('lang-active');
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.dataset.i18n;
+      element.textContent = translations.en[key] || element.dataset.fr;
+    });
+
+    document.documentElement.lang = 'en';
+    langEn.classList.add('lang-active');
+    langFr.classList.remove('lang-active');
+  } else {
+    document.querySelectorAll('#menu a').forEach(link => {
+      link.textContent = originalMenuTexts.get(link);
+    });
+
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      element.textContent = element.dataset.fr;
+    });
+
+    document.documentElement.lang = 'fr';
+    langFr.classList.add('lang-active');
+    langEn.classList.remove('lang-active');
+  }
+
+  localStorage.setItem('leon-language', lang);
+}
+
+langEn.addEventListener('click', () => {
+  setLanguage('en');
 });
 
 langFr.addEventListener('click', () => {
-  document.querySelectorAll('#menu a').forEach(link => {
-    link.textContent = originalTexts.get(link);
-  });
-
-  document.documentElement.lang = 'fr';
-  langFr.classList.add('lang-active');
-  langEn.classList.remove('lang-active');
+  setLanguage('fr');
 });
+
+const savedLanguage = localStorage.getItem('leon-language') || 'fr';
+setLanguage(savedLanguage);
