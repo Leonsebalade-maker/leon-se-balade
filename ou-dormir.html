@@ -1,1 +1,133 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Où dormir en camping-car avec Léon : aires, campings, chez l’habitant et nuits en autonomie.">
+  <title>Où dormir ? | Léon se balade</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html#accueil" aria-label="Retour à l'accueil">
+      <img src="Logo.PNG" alt="Léon se balade" class="site-logo">
+    </a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+
+    <nav id="menu" class="nav" aria-label="Navigation principale">
+      <a href="index.html#accueil">Accueil</a>
+      <a href="index.html#voyages">Nos voyages</a>
+      <a href="index.html#carnets">Carnets de route</a>
+      <a href="index.html#camping-car">Vie en camping-car</a>
+      <a href="index.html#conseils">Conseils & astuces</a>
+      <a href="index.html#apropos">Nous & Léon</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="language-switcher">
+      <button type="button" id="lang-fr" class="lang-active">FR</button>
+      <span>|</span>
+      <button type="button" id="lang-en">EN</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section ou-dormir-intro">
+      <p class="eyebrow">Vie en camping-car</p>
+      <h1>Où poser Léon pour la nuit ?</h1>
+
+      <p class="ou-dormir-lead">
+        En camping-car, il n’y a pas une seule bonne façon de passer la nuit.
+        Il y a surtout celle qui correspond au moment, à l’endroit… et à l’envie du jour.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="ou-dormir-grid">
+
+        <article class="ou-dormir-card">
+          <span class="ou-dormir-number">01</span>
+          <h2>Les aires de camping-car</h2>
+          <p>
+            Pratiques, équipées ou toutes simples, elles sont souvent parfaites pour une étape.
+            On les choisit pour leur facilité d’accès, leurs services, leur proximité avec une ville
+            ou simplement parce qu’on veut dormir, faire les vidanges et reprendre la route le lendemain.
+          </p>
+        </article>
+
+        <article class="ou-dormir-card">
+          <span class="ou-dormir-number">02</span>
+          <h2>Les campings</h2>
+          <p>
+            Quand on veut vraiment se poser, sortir table et fauteuils, profiter d’un peu plus de confort
+            ou rester plusieurs jours, le camping devient souvent le bon choix.
+            Ce n’est pas forcément notre solution systématique, mais parfois c’est exactement ce qu’il faut.
+          </p>
+        </article>
+
+        <article class="ou-dormir-card">
+          <span class="ou-dormir-number">03</span>
+          <h2>Chez l’habitant ou les producteurs</h2>
+          <p>
+            Une façon différente de faire étape, souvent plus conviviale.
+            On y trouve parfois de belles rencontres, des produits locaux, un peu de calme
+            et une autre manière de découvrir un territoire.
+          </p>
+        </article>
+
+        <article class="ou-dormir-card">
+          <span class="ou-dormir-number">04</span>
+          <h2>Dormir en autonomie</h2>
+          <p>
+            Parfois, on cherche simplement un endroit calme où stationner sans s’installer.
+            Là, le bon sens devient essentiel : respecter les interdictions, les riverains,
+            ne rien laisser derrière soi et rester discret.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section section-tint ou-dormir-choice">
+      <p class="eyebrow">Alors, on dort où ce soir ?</p>
+      <h2>Le bon endroit dépend surtout de ce qu’on cherche.</h2>
+
+      <p>
+        Si on visite une ville, on privilégie souvent une aire proche du centre.
+        Si on veut souffler plusieurs jours, le camping peut être plus adapté.
+        Si on cherche le calme ou une étape différente, l’habitant ou un producteur peut être une belle option.
+        Et quand on est autonomes et que le lieu s’y prête, un simple stationnement peut suffire.
+      </p>
+
+      <p>
+        Il n’y a pas de règle absolue : on choisit selon le voyage, nos besoins et notre envie du moment.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="index.html#accueil">
+      <span><strong>Léon</strong><small>se balade</small></span>
+    </a>
+
+    <p>Les souvenirs ont parfois plusieurs vies.</p>
+
+    <p class="copyright">
+      © <span id="year"></span> Léon se balade
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
