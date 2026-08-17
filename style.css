@@ -176,6 +176,8 @@
   justify-content: center;
   margin-top: 5px;
   padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .about-logo img {
