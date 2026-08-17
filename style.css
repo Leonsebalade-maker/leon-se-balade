@@ -221,3 +221,18 @@
 .language-switcher button:hover {
   transform: translateY(-1px);
 }
+[data-i18n] {
+  min-height: 1em;
+}
+
+.hero h1[data-i18n] {
+  min-height: 2.2em;
+}
+
+.hero-text[data-i18n] {
+  min-height: 3.4em;
+}
+
+.hero .actions {
+  min-height: 52px;
+}
