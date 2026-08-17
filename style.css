@@ -236,3 +236,59 @@
 .hero .actions {
   min-height: 52px;
 }
+.ou-dormir-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.ou-dormir-card {
+  padding: 30px;
+  border-radius: 22px;
+  border: 1px solid rgba(47, 59, 45, 0.12);
+  box-shadow: 0 10px 30px rgba(47, 59, 45, 0.06);
+}
+
+.ou-dormir-card:nth-child(1) {
+  background: #dfe5c8;
+}
+
+.ou-dormir-card:nth-child(2) {
+  background: #eee4d2;
+}
+
+.ou-dormir-card:nth-child(3) {
+  background: #d8dfd1;
+}
+
+.ou-dormir-card:nth-child(4) {
+  background: #e8dfca;
+}
+
+.ou-dormir-number {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #59634c;
+  margin-bottom: 12px;
+}
+
+.ou-dormir-card h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.ou-dormir-card p {
+  margin: 0;
+}
+
+.ou-dormir-choice {
+  border-top: 1px solid rgba(47, 59, 45, 0.08);
+}
+
+@media (max-width: 768px) {
+  .ou-dormir-grid {
+    grid-template-columns: 1fr;
+  }
+}
