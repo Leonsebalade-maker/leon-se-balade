@@ -189,3 +189,35 @@
 #apropos {
   padding-bottom: 10px;
 }
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 15px;
+}
+
+.language-switcher button {
+  border: none;
+  border-radius: 10px;
+  padding: 9px 13px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #2f3b2d;
+}
+
+/* Français : vert amande */
+#lang-fr {
+  background: #c9cfaa;
+}
+
+/* Anglais : beige */
+#lang-en {
+  background: #e7e1cf;
+}
+
+/* Petit effet au passage de la souris */
+.language-switcher button:hover {
+  transform: translateY(-1px);
+}
