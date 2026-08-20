@@ -299,3 +299,12 @@
 .ou-dormir-intro + .section {
   padding-top: 20px;
 }
+.features > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.features .text-link {
+  margin-top: auto;
+  padding-top: 18px;
+}
