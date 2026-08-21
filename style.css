@@ -313,3 +313,21 @@
   margin-top: auto;
   padding-top: 18px;
 }
+#camping-car .features {
+  align-items: stretch;
+}
+
+#camping-car .features article {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100%;
+}
+
+#camping-car .features article p {
+  margin-bottom: 0;
+}
+
+#camping-car .features .text-link {
+  align-self: end;
+  margin-top: 20px;
+}
