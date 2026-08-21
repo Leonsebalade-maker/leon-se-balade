@@ -299,9 +299,14 @@
 .ou-dormir-intro + .section {
   padding-top: 20px;
 }
-.features > div {
+.features article {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.features article p {
+  flex-grow: 1;
 }
 
 .features .text-link {
