@@ -302,15 +302,13 @@
 /* Alignement des 3 liens - Voyager en camping-car */
 
 #camping-car .features article {
-  display: grid;
-  grid-template-rows: auto auto 110px auto;
+  position: relative;
+  padding-bottom: 45px;
 }
 
-#camping-car .features article p {
+#camping-car .features .text-link {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   margin: 0;
-}
-
-#camping-car .features article .text-link {
-  align-self: start;
-  margin-top: 18px;
 }
