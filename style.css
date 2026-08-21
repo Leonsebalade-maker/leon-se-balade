@@ -336,3 +336,11 @@
   margin-top: auto !important;
   padding-top: 20px !important;
 }
+#camping-car .features h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#camping-car .features h3 a:hover {
+  opacity: 0.75;
+}
