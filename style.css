@@ -312,3 +312,27 @@
   bottom: 0;
   margin: 0;
 }
+/* ALIGNEMENT FINAL DES 3 LIENS */
+
+#camping-car .features {
+  align-items: stretch !important;
+}
+
+#camping-car .features article {
+  display: flex !important;
+  flex-direction: column !important;
+  position: static !important;
+  height: auto !important;
+  min-height: 230px;
+  padding-bottom: 0 !important;
+}
+
+#camping-car .features article p {
+  margin-bottom: 0 !important;
+}
+
+#camping-car .features article .text-link {
+  position: static !important;
+  margin-top: auto !important;
+  padding-top: 20px !important;
+}
