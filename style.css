@@ -347,3 +347,12 @@
 .language-switcher {
   display: none !important;
 }
+/* Sous-titres dans les pages de contenu */
+.ou-dormir-card h3 {
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+
+.ou-dormir-card h3 + p {
+  margin-top: 0;
+}
