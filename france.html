@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+        content="La France au rythme de Léon : nos escapades, nos coups de cœur et nos découvertes au fil des routes.">
+
+  <title>La France au rythme de Léon | Léon se balade</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <a class="brand" href="index.html#accueil" aria-label="Retour à l'accueil">
+      <img src="Logo.PNG" alt="Léon se balade" class="site-logo">
+    </a>
+
+    <button class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="menu">
+      Menu
+    </button>
+
+    <nav id="menu" class="nav" aria-label="Navigation principale">
+      <a href="index.html#accueil">Accueil</a>
+      <a href="index.html#voyages">Nos voyages</a>
+      <a href="index.html#carnets">Carnets de route</a>
+      <a href="index.html#camping-car">Vie en camping-car</a>
+      <a href="index.html#conseils">Conseils & astuces</a>
+      <a href="index.html#apropos">Nous & Léon</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="language-switcher">
+      <button type="button" id="lang-fr" class="lang-active">FR</button>
+      <span>|</span>
+      <button type="button" id="lang-en">EN</button>
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="section france-intro">
+
+      <p class="eyebrow">Sur les routes de France</p>
+
+      <h1>La France au rythme de Léon</h1>
+
+      <div class="france-lead">
+
+        <p>
+          On rêve souvent de partir loin, alors qu’il reste tant de choses
+          à découvrir juste à côté de chez nous.
+        </p>
+
+        <p>
+          De la Bretagne aux Alpes, des îles de l’Atlantique aux villages alsaciens,
+          des Pyrénées au nord de la France, Léon nous a déjà emmenés sur pas mal
+          de routes. Certaines pour quelques jours, d’autres pour de vrais road trips.
+        </p>
+
+        <p>
+          Nous avons regroupé ici <strong>quelques-unes de nos escapades et de nos coups
+          de cœur</strong>, sans chercher à tout raconter ni à établir un classement.
+        </p>
+
+        <p>
+          <strong>Et surtout, cette page n’a pas vocation à être terminée.</strong>
+          Léon continue de prendre la route et, au fil de nos voyages, de nouvelles
+          régions, de nouveaux paysages et de nouveaux coups de cœur viendront
+          naturellement s’y ajouter. ❤️
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="section france-map-section">
+
+      <div class="france-map-wrap">
+        <img src="carte-france.png"
+             alt="Carte illustrée de nos voyages en France avec Léon"
+             class="france-map">
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <a class="brand footer-brand" href="index.html#accueil">
+      <span>
+        <strong>Léon</strong>
+        <small>se balade</small>
+      </span>
+    </a>
+
+    <p>Les souvenirs ont parfois plusieurs vies.</p>
+
+    <p class="copyright">
+      © <span id="year"></span> Léon se balade
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
