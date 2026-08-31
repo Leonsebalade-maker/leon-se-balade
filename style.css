@@ -500,3 +500,62 @@
     order: initial;
   }
 }
+/* =========================
+   NAVIGATION RÉGIONS - FRANCE
+   ========================= */
+
+.france-region-nav {
+  max-width: 1100px;
+  margin: 10px auto 20px;
+  padding: 35px 24px 15px;
+  text-align: center;
+}
+
+.france-region-nav .eyebrow {
+  margin-bottom: 20px;
+}
+
+.france-region-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.france-region-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  padding: 16px 20px;
+
+  background: #ece7d9;
+  border: 1px solid rgba(89, 99, 76, 0.18);
+  border-radius: 16px;
+
+  color: #3f4a39;
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.france-region-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(45, 53, 39, 0.10);
+}
+
+/* Tablette */
+@media (max-width: 800px) {
+  .france-region-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Téléphone */
+@media (max-width: 520px) {
+  .france-region-links {
+    grid-template-columns: 1fr;
+  }
+}
