@@ -610,3 +610,7 @@ font-weight: 400;
 .region-summary {
   display: none;
 }
+/* Ajustement photo Marais poitevin */
+.france-destination img[src="MaraisPoitevin.png"] {
+  object-position: 35% center;
+}
