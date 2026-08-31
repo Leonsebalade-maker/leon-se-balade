@@ -533,9 +533,9 @@
   border-radius: 16px;
 
   color: #3f4a39;
-  font-family: "Playfair Display", serif;
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-family: "Allura", cursive;
+font-size: 2rem;
+font-weight: 400;
   text-decoration: none;
 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
