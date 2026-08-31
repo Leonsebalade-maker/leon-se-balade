@@ -606,3 +606,7 @@ font-weight: 400;
 .region-summary:hover {
   background: #d5ddba;
 }
+/* Masquer les titres doublons des accordéons France */
+.region-summary {
+  display: none;
+}
