@@ -92,3 +92,35 @@ langFr.addEventListener('click', () => {
 
 const savedLanguage = localStorage.getItem('leon-language') || 'fr';
 setLanguage(savedLanguage);
+// Navigation des régions - Page France
+document.querySelectorAll('.france-region-links a').forEach(link => {
+  link.addEventListener('click', function (event) {
+
+    const targetId = this.getAttribute('href');
+
+    if (!targetId || !targetId.startsWith('#')) return;
+
+    const region = document.querySelector(targetId);
+
+    if (region && region.tagName.toLowerCase() === 'details') {
+      event.preventDefault();
+
+      // Ferme les autres régions ouvertes
+      document.querySelectorAll('.region-accordion').forEach(item => {
+        if (item !== region) {
+          item.removeAttribute('open');
+        }
+      });
+
+      // Ouvre la région choisie
+      region.setAttribute('open', '');
+
+      // Descend doucement jusqu'à la région
+      region.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+
+  });
+});
