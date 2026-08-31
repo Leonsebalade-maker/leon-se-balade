@@ -42,7 +42,7 @@
     linear-gradient(rgba(45, 55, 40, 0.35), rgba(45, 55, 40, 0.35)),
     url("RegionFrance.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 75%;
   background-repeat: no-repeat;
 }
 .card-scotland .card-photo {
