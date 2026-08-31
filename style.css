@@ -482,3 +482,19 @@
     max-width: none;
   }
 }
+/* Alterner photo / texte sur certaines destinations */
+.destination-reverse .destination-photo {
+  order: 2;
+}
+
+.destination-reverse .destination-content {
+  order: 1;
+}
+
+/* Sur téléphone : on remet toujours la photo avant le texte */
+@media (max-width: 850px) {
+  .destination-reverse .destination-photo,
+  .destination-reverse .destination-content {
+    order: initial;
+  }
+}
