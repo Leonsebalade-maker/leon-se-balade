@@ -1059,3 +1059,72 @@ font-weight: 400;
     padding: 18px;
   }
 }
+/* =========================
+   CARNET - PARCOURS EN CARTES
+   ========================= */
+
+.carnet-stop {
+  padding: 35px 24px;
+}
+
+.carnet-stop .container {
+  max-width: 1100px;
+}
+
+.carnet-stop-heading {
+  margin-bottom: 15px;
+}
+
+.carnet-stop-label {
+  font-size: 0.68rem;
+  margin-bottom: 5px;
+}
+
+.carnet-stop-heading h3 {
+  font-size: 1.45rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.carnet-stop-content {
+  font-size: 0.88rem;
+}
+
+.carnet-stop-content > p {
+  line-height: 1.55;
+  margin: 0 0 12px;
+}
+
+.carnet-tip {
+  display: block;
+  margin: 8px 0;
+  padding: 9px 11px;
+  border-radius: 9px;
+}
+
+.carnet-tip-icon {
+  display: inline;
+  font-size: 0.95rem;
+  margin-right: 4px;
+}
+
+.carnet-tip > div {
+  display: inline;
+}
+
+.carnet-tip strong {
+  font-size: 0.84rem;
+}
+
+.carnet-tip p {
+  display: inline;
+  margin: 0 0 0 4px;
+  line-height: 1.45;
+}
+
+.carnet-stop-verdict {
+  margin-top: 12px;
+  padding-left: 10px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
