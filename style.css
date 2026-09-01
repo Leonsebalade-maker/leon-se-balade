@@ -624,5 +624,5 @@ font-weight: 400;
 }
 /* Ajustement photo Massif central */
 .france-destination img[src="MassifCentral.png"] {
-  object-position: center 35%;
+  object-position: center 30%;
 }
