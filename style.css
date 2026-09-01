@@ -983,3 +983,79 @@ font-weight: 400;
   line-height: 1.75;
   margin-bottom: 0;
 }
+/* =========================
+   CARNET - ETAPES
+   ========================= */
+
+.carnet-stop {
+  padding: 65px 24px;
+  background: #f7f3e9;
+}
+
+.carnet-stop .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carnet-stop-heading {
+  margin-bottom: 30px;
+}
+
+.carnet-stop-label {
+  margin: 0 0 8px;
+  color: #b26f45;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.carnet-stop-heading h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.2;
+  margin: 0;
+  color: #283025;
+}
+
+.carnet-stop-content > p {
+  line-height: 1.75;
+}
+
+.carnet-tip {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 15px;
+  margin: 22px 0;
+  padding: 20px 22px;
+  background: #ece7d9;
+  border-radius: 16px;
+}
+
+.carnet-tip-icon {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.carnet-tip strong {
+  color: #283025;
+}
+
+.carnet-tip p {
+  margin: 6px 0 0;
+  line-height: 1.65;
+}
+
+.carnet-stop-verdict {
+  margin-top: 28px;
+  padding-left: 18px;
+  border-left: 3px solid #b26f45;
+  color: #59634c;
+}
+
+@media (max-width: 600px) {
+  .carnet-tip {
+    grid-template-columns: 35px 1fr;
+    padding: 18px;
+  }
+}
