@@ -622,3 +622,7 @@ font-weight: 400;
 .france-destination img[src="MaraisPoitevin.png"] {
   object-position: 25% center;
 }
+/* Ajustement photo Massif central */
+.france-destination img[src="MassifCentral.png"] {
+  object-position: center 60%;
+}
