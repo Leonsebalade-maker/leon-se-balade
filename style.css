@@ -946,3 +946,7 @@ font-weight: 400;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
 }
+.carnet-country-photo,
+.carnet-country-photo img {
+  min-height: 0 !important;
+}
