@@ -934,3 +934,50 @@ font-weight: 400;
     max-width: 620px;
   }
 }
+/* =========================
+   CARNET - CHAPITRES
+   ========================= */
+
+.carnet-chapter {
+  padding: 75px 24px;
+  background: #f7f3e9;
+}
+
+.carnet-chapter .container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.carnet-chapter-heading {
+  max-width: 780px;
+}
+
+.carnet-chapter-number {
+  font-family: "Playfair Display", serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  margin: 0 0 8px;
+  color: #b26f45;
+  opacity: 0.75;
+}
+
+.carnet-chapter-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: 1.15;
+  color: #283025;
+  margin: 8px 0 22px;
+}
+
+.carnet-chapter-lead {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #59634c;
+  margin-bottom: 18px;
+}
+
+.carnet-chapter-heading > p:last-child {
+  line-height: 1.75;
+  margin-bottom: 0;
+}
