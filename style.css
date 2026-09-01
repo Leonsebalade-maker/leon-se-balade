@@ -940,3 +940,9 @@ font-weight: 400;
   }
 
 }
+.carnet-country-hero {
+  min-height: 0 !important;
+  height: auto !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
