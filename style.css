@@ -862,8 +862,10 @@ font-weight: 400;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 70px 8%;
-  max-width: 720px;
+  padding: 70px 70px;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
 }
 
 .carnet-country-intro h1 {
