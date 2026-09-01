@@ -844,7 +844,7 @@ font-weight: 400;
   grid-template-columns: 42% 58%;
   align-items: center;
   background: #f7f3e9;
-  padding: 70px 6%;
+  padding: 35px 6% 40px;
   gap: 65px;
 }
 
