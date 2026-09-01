@@ -772,3 +772,66 @@ font-weight: 400;
     height: 300px;
   }
 }
+/* =========================
+   CARNET ALLEMAGNE - ITINERAIRE
+   ========================= */
+
+.carnet-itinerary {
+  padding: 85px 24px;
+  background: #ece7d9;
+  text-align: center;
+}
+
+.carnet-itinerary .container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.carnet-itinerary h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(34px, 5vw, 50px);
+  color: #283025;
+  margin: 5px 0 20px;
+}
+
+.carnet-itinerary-intro {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  line-height: 1.75;
+}
+
+.carnet-route {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+  max-width: 950px;
+  margin: 0 auto 40px;
+}
+
+.carnet-route span {
+  position: relative;
+  padding: 10px 18px;
+  background: #f9f6ee;
+  border: 1px solid rgba(89, 99, 76, 0.18);
+  border-radius: 30px;
+  font-weight: 600;
+  color: #59634c;
+}
+
+.carnet-route span:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -23px;
+  color: #b26f45;
+  font-weight: 700;
+}
+
+.carnet-itinerary-ending {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #59634c;
+}
