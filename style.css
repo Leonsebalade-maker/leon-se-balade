@@ -1185,3 +1185,31 @@ font-weight: 400;
     transform: translateX(-50%);
   }
 }
+/* =========================
+   CARNET - COULEURS DES CARTES
+   ========================= */
+
+.carnet-stops-grid {
+  background: #f7f3e9;
+}
+
+.carnet-stops-grid .carnet-stop {
+  background: #e5ead9;
+  border: 1px solid rgba(89, 99, 76, 0.20);
+}
+
+.carnet-stops-grid .carnet-tip {
+  background: rgba(249, 246, 238, 0.72);
+}
+
+.carnet-stops-grid .carnet-stop-heading h3 {
+  color: #394333;
+}
+
+.carnet-stops-grid .carnet-stop-label {
+  color: #778267;
+}
+
+.carnet-stops-grid .carnet-stop:not(:last-child)::after {
+  color: #b26f45;
+}
