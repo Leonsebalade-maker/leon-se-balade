@@ -1213,3 +1213,49 @@ font-weight: 400;
 .carnet-stops-grid .carnet-stop:not(:last-child)::after {
   color: #b26f45;
 }
+/* =========================
+   CARNET - CONSEILS PRATIQUES
+   ========================= */
+
+.carnet-practical-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  background: #f7f3e9;
+}
+
+.carnet-practical-card {
+  padding: 24px;
+  background: #e5ead9;
+  border: 1px solid rgba(89, 99, 76, 0.18);
+  border-radius: 16px;
+}
+
+.carnet-practical-icon {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.carnet-practical-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  color: #394333;
+  margin: 0 0 12px;
+}
+
+.carnet-practical-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 850px) {
+  .carnet-practical-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
