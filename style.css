@@ -635,3 +635,46 @@ font-weight: 400;
 .france-destination img[src="MassifCentral.png"] {
   object-position: center 30%;
 }
+/* =========================
+   CARNETS DE ROUTE
+   ========================= */
+
+.carnets-hero {
+  padding: 95px 24px 80px;
+  text-align: center;
+  background: #f7f3e9;
+}
+
+.carnets-hero .container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.carnets-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(44px, 6vw, 68px);
+  line-height: 1.05;
+  margin: 8px 0 25px;
+  color: #283025;
+}
+
+.carnets-hero-text {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(21px, 2.5vw, 27px);
+  line-height: 1.45;
+  color: #59634c;
+  margin: 0 auto 22px;
+}
+
+.carnets-hero .container > p:not(.eyebrow):not(.carnets-hero-text):not(.carnets-hero-ending) {
+  max-width: 720px;
+  margin: 0 auto 18px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.carnets-hero-ending {
+  margin: 25px auto 0;
+  font-weight: 700;
+  color: #59634c;
+}
