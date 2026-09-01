@@ -501,11 +501,16 @@
   grid-row: 1;
 }
 
-/* Sur téléphone : on remet toujours la photo avant le texte */
+/* Sur téléphone et tablette : photo puis texte sur une seule colonne */
 @media (max-width: 850px) {
-  .destination-reverse .destination-photo,
+  .destination-reverse .destination-photo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
   .destination-reverse .destination-content {
-    order: initial;
+    grid-column: 1;
+    grid-row: 2;
   }
 }
 /* =========================
