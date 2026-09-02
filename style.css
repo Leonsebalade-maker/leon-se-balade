@@ -1375,3 +1375,21 @@ font-weight: 400;
   background: #e5ead9;
   color: #394333;
 }
+@media (max-width: 850px) {
+  .carnet-route a {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #f9f6ee;
+    border: 1px solid rgba(89, 99, 76, 0.18);
+    border-radius: 999px;
+    color: #59634c;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .carnet-route a:visited {
+    color: #59634c;
+    text-decoration: none;
+  }
+}
