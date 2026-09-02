@@ -1382,3 +1382,16 @@ footer .copyright {
   text-align: center;
   margin-top: 24px;
 }
+.footer-text {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-text p {
+  text-align: center;
+  margin: 0;
+}
+
+.footer-text .copyright {
+  margin-top: 24px;
+}
