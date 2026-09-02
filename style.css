@@ -809,7 +809,8 @@ font-weight: 400;
   margin: 0 auto 40px;
 }
 
-.carnet-route span {
+.carnet-route span,
+.carnet-route a {
   position: relative;
   padding: 10px 18px;
   background: #f9f6ee;
@@ -817,6 +818,7 @@ font-weight: 400;
   border-radius: 30px;
   font-weight: 600;
   color: #59634c;
+  text-decoration: none;
 }
 
 .carnet-route span:not(:last-child)::after {
