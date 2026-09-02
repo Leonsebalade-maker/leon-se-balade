@@ -1259,3 +1259,104 @@ font-weight: 400;
     max-width: 600px;
   }
 }
+/* =========================
+   CARNET - SI C'ETAIT A REFAIRE
+   ========================= */
+
+.carnet-retour {
+  padding: 75px 24px 90px;
+  background: #efe1d5;
+}
+
+.carnet-retour .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.carnet-retour-heading {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.carnet-retour-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 5vw, 52px);
+  color: #283025;
+  margin: 6px 0 18px;
+}
+
+.carnet-retour-heading p {
+  line-height: 1.7;
+}
+
+.carnet-retour-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.carnet-retour-grid article {
+  background: #f9f6ee;
+  border: 1px solid rgba(178, 111, 69, 0.18);
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: center;
+}
+
+.carnet-retour-grid article > span {
+  display: block;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.carnet-retour-grid h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  color: #394333;
+  margin: 0 0 10px;
+}
+
+.carnet-retour-grid p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.carnet-retour-final {
+  max-width: 820px;
+  margin: 45px auto 0;
+  padding: 28px 32px;
+  text-align: center;
+  background: #e5ead9;
+  border-radius: 18px;
+}
+
+.carnet-retour-final p {
+  margin: 0 0 12px;
+  line-height: 1.7;
+}
+
+.carnet-retour-final p:last-child {
+  margin-bottom: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.08rem;
+  color: #59634c;
+}
+
+@media (max-width: 950px) {
+  .carnet-retour-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .carnet-retour-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carnet-retour-final {
+    padding: 24px 20px;
+  }
+}
