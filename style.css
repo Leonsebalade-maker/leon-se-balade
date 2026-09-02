@@ -758,6 +758,7 @@ font-weight: 400;
 .carnet-link {
   font-weight: 700;
   color: #59634c;
+  text-decoration: none;
 }
 
 /* Tablette et téléphone */
