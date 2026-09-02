@@ -1367,3 +1367,6 @@ font-weight: 400;
 .carnet-stop[id] {
   scroll-margin-top: 100px;
 }
+.site-footer {
+  text-align: center;
+}
