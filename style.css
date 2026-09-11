@@ -1799,10 +1799,10 @@ footer .copyright {
 }
 
 .story-detail > img {
-  width: 145px !important;
-  height: 145px !important;
-  min-width: 145px;
-  max-width: 145px !important;
+  width: 190px !important;
+  height: 190px !important;
+  min-width: 190px;
+  max-width: 190px !important;
   object-fit: cover;
   border-radius: 18px;
 }
