@@ -1547,3 +1547,66 @@ footer .copyright {
     width: 100%;
   }
 }
+/* =========================
+   VOYAGE - CHAPITRES
+   ========================= */
+
+.voyage-chapter {
+  padding: 90px 24px;
+  background: #f7f3e9;
+}
+
+.voyage-chapter-header {
+  max-width: 900px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.chapter-number {
+  margin: 0 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #b26f45;
+  letter-spacing: 0.15em;
+}
+
+.voyage-chapter-header h2 {
+  margin: 12px 0 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.1;
+  color: #283025;
+}
+
+.voyage-photo-wide {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.voyage-photo-wide img {
+  display: block;
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 14px 35px rgba(45, 53, 39, 0.12);
+}
+
+.voyage-photo-wide figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #778267;
+}
+
+@media (max-width: 700px) {
+  .voyage-chapter {
+    padding: 65px 18px;
+  }
+
+  .voyage-photo-wide img {
+    border-radius: 16px;
+  }
+}
