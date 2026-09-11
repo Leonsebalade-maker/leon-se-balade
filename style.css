@@ -1395,3 +1395,67 @@ footer .copyright {
 .footer-text .copyright {
   margin-top: 24px;
 }
+/* =========================
+   VOYAGE - HERO
+   ========================= */
+
+.voyage-hero {
+  padding: 95px 24px 80px;
+  background: #f7f3e9;
+  text-align: center;
+}
+
+.voyage-hero .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.voyage-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(44px, 6vw, 68px);
+  line-height: 1.05;
+  margin: 8px 0 25px;
+  color: #283025;
+}
+
+.voyage-hero-text {
+  max-width: 760px;
+  margin: 0 auto 35px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(21px, 2.5vw, 27px);
+  line-height: 1.5;
+  color: #59634c;
+}
+
+.voyage-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.voyage-stats div {
+  background: #e5ead9;
+  border-radius: 16px;
+  padding: 20px 14px;
+}
+
+.voyage-stats strong {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  color: #283025;
+}
+
+.voyage-stats span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #59634c;
+}
+
+@media (max-width: 700px) {
+  .voyage-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
