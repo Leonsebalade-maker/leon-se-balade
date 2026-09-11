@@ -1742,3 +1742,51 @@ footer .copyright {
     margin: 0 auto;
   }
 }
+.story-detail {
+  max-width: 620px;
+  margin: 35px auto 45px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.story-detail img {
+  width: 145px;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.story-detail-text {
+  flex: 1;
+}
+
+.story-detail-text span {
+  display: block;
+  margin-bottom: 7px;
+  color: #b26f45;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.story-detail-text p {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #59634c;
+}
+
+@media (max-width: 600px) {
+  .story-detail {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .story-detail img {
+    width: 105px;
+    height: 105px;
+  }
+}
