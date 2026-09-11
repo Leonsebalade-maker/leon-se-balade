@@ -1645,3 +1645,20 @@ footer .copyright {
   object-fit: cover;
   object-position: center;
 }
+/* Resserrement entre introduction et premier chapitre */
+
+.voyage-story-intro {
+  padding-bottom: 25px;
+}
+
+.voyage-chapter {
+  padding-top: 35px;
+}
+
+/* Photo d'ouverture du chapitre */
+
+.voyage-photo-wide img {
+  height: 360px;
+  object-fit: cover;
+  object-position: center 35%;
+}
