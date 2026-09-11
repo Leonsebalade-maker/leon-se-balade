@@ -1840,15 +1840,49 @@ footer .copyright {
 }
 
 @media (max-width: 700px) {
+.kassel-gallery {
+  width: 100%;
+  max-width: 650px;
+  margin: 40px auto 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.kassel-photo {
+  margin: 0;
+  min-width: 0;
+}
+
+.kassel-photo-secondary {
+  margin-top: 0;
+}
+
+.kassel-photo img {
+  display: block;
+  width: 100% !important;
+  height: 230px !important;
+  max-width: 100% !important;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.kassel-photo figcaption {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: #778267;
+}
+
+@media (max-width: 700px) {
   .kassel-gallery {
+    max-width: 360px;
     grid-template-columns: 1fr;
   }
 
-  .kassel-photo-secondary {
-    margin-top: 0;
-  }
-
   .kassel-photo img {
-    height: auto;
+    height: auto !important;
   }
 }
