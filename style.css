@@ -1790,3 +1790,19 @@ footer .copyright {
     height: 105px;
   }
 }
+.story-detail {
+  max-width: 620px;
+  margin: 35px auto 45px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.story-detail > img {
+  width: 145px !important;
+  height: 145px !important;
+  min-width: 145px;
+  max-width: 145px !important;
+  object-fit: cover;
+  border-radius: 18px;
+}
