@@ -1503,3 +1503,47 @@ footer .copyright {
     width: 100%;
   }
 }
+/* Boutons Voyage / Carnet de route */
+
+.voyage-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.voyage-card-actions .voyage-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 18px;
+  border-radius: 30px;
+  background: #59634c;
+  border: 2px solid #59634c;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.voyage-card-actions .voyage-button-outline {
+  background: transparent;
+  color: #59634c;
+}
+
+.voyage-card-actions .voyage-button:hover {
+  background: #778267;
+  border-color: #778267;
+  color: #ffffff;
+}
+
+@media (max-width: 500px) {
+  .voyage-card-actions {
+    flex-direction: column;
+  }
+
+  .voyage-card-actions .voyage-button {
+    width: 100%;
+  }
+}
