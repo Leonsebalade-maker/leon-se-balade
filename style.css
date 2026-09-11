@@ -1699,3 +1699,46 @@ footer .copyright {
   font-style: italic;
   color: #778267;
 }
+.story-split {
+  max-width: 900px;
+  margin: 38px auto 46px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.story-split-text p {
+  margin: 0;
+}
+
+.story-split-photo {
+  margin: 0;
+}
+
+.story-split-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+.story-split-photo figcaption {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #778267;
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .story-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .story-split-photo {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
