@@ -23,6 +23,90 @@
     .book-tag {font-size: .85rem; font-weight: 700; color: #637d57; margin-bottom: 12px;}
     .books-note {max-width: 800px; margin: 42px auto 0; text-align: center; line-height: 1.7;}
     .books-footer-link {display: inline-block; margin-top: 20px;}
+ 
+  
+.leon-gallery {
+  max-width: 1040px;
+  margin: 45px auto;
+  padding: 30px 20px;
+  background: #f3e8d2;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.leon-gallery h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  color: #303a2d;
+  margin: 12px 0;
+}
+
+.leon-gallery-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 22px auto;
+}
+
+.leon-gallery-figure {
+  width: 75%;
+  max-width: 350px;
+  margin: 0;
+  padding: 12px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px #0002;
+}
+
+.leon-gallery-figure img {
+  width: 100%;
+  height: 430px;
+  object-fit: contain;
+}
+
+.leon-gallery-figure figcaption {
+  padding: 12px 0 4px;
+  color: #566348;
+  font-weight: bold;
+}
+
+.leon-gallery-arrow {
+  background: #566348;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.leon-gallery-dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.leon-gallery-dots button {
+  border: 1px solid #8b997c;
+  background: white;
+  border-radius: 20px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.leon-gallery-dots button[aria-current="true"] {
+  background: #566348;
+  color: white;
+}
+
+@media (max-width: 550px) {
+  .leon-gallery-figure img { height: 300px; }
+  .leon-gallery-stage { gap: 5px; }
+}
+
+  
   </style>
 </head>
 <body>
@@ -42,6 +126,7 @@
       <a href="index.html#contact">Contact</a>
     </nav>
   </header>
+
   <main>
     <section class="books-intro">
       <p class="eyebrow">Les aventures de Léon sur papier</p>
@@ -65,11 +150,101 @@
       </div>
       <p class="books-note">Les liens vers les fiches Amazon seront ajoutés prochainement.<br><a class="text-link books-footer-link" href="index.html#voyages">← Revenir à nos voyages</a></p>
     </section>
+
+  
+<section class="leon-gallery" aria-label="Extraits des livres de Léon">
+  <p>✏️ 🖍️ 🎨</p>
+  <h2>Un petit coup d'œil dans les livres de Léon !</h2>
+  <p>Sept aventures, des coloriages et des jeux à découvrir !</p>
+
+  <div class="leon-gallery-stage">
+    <button class="leon-gallery-arrow" id="leon-prev"
+            type="button" aria-label="Page précédente">‹</button>
+
+    <figure class="leon-gallery-figure">
+      <img id="leon-gallery-image"
+           src="galerie-leon/france.jpg"
+           alt="Extrait d'un livre de Léon">
+      <figcaption id="leon-gallery-caption">France · Coloriage</figcaption>
+    </figure>
+
+    <button class="leon-gallery-arrow" id="leon-next"
+            type="button" aria-label="Page suivante">›</button>
+  </div>
+
+  <div class="leon-gallery-dots" id="leon-gallery-dots"></div>
+
+  <p>De vrais extraits des livres : coloriages et petits défis !</p>
+</section>
+
+  
   </main>
   <footer>
     <a class="brand footer-brand" href="index.html#accueil"><span class="brand-mark">L</span><span><strong>Léon</strong><small>se balade</small></span></a>
     <div class="footer-text"><p>Les souvenirs ont parfois plusieurs vies.</p><p>© Léon se balade — Tous droits réservés.</p></div>
   </footer>
   <script src="script.js"></script>
+
+
+<script>
+(function () {
+  const pages = [
+    ["France · Coloriage", "france.jpg"],
+    ["France · Jeu", "france-jeu.jpg"],
+    ["Écosse · Coloriage", "ecosse.jpg"],
+    ["Écosse · Jeu", "ecosse-jeu.jpg"],
+    ["Espagne · Coloriage", "espagne.jpg"],
+    ["Espagne · Jeu", "espagne-jeu.jpg"],
+    ["Europe centrale · Coloriage", "europe.jpg"],
+    ["Europe centrale · Jeu", "europe-jeu.jpg"],
+    ["Contes de Grimm · Coloriage", "grimm.jpg"],
+    ["Contes de Grimm · Jeu", "grimm-jeu.jpg"],
+    ["Autriche · Coloriage", "autriche.jpg"],
+    ["Autriche · Jeu", "autriche-jeu.jpg"],
+    ["Course au large · Coloriage", "large.jpg"],
+    ["Course au large · Jeu", "large-jeu.jpg"]
+  ];
+
+  let current = 0;
+
+  const image = document.getElementById("leon-gallery-image");
+  const caption = document.getElementById("leon-gallery-caption");
+  const dots = document.getElementById("leon-gallery-dots");
+
+  function afficher(index) {
+    current = (index + pages.length) % pages.length;
+    image.src = "galerie-leon/" + pages[current][1];
+    image.alt = "Extrait : " + pages[current][0];
+    caption.textContent = pages[current][0];
+
+    [...dots.children].forEach((bouton, i) => {
+      bouton.setAttribute(
+        "aria-current",
+        String(i === Math.floor(current / 2))
+      );
+    });
+  }
+
+  pages.forEach((page, index) => {
+    if (index % 2 !== 0) return;
+
+    const bouton = document.createElement("button");
+    bouton.type = "button";
+    bouton.textContent = page[0].split(" · ")[0];
+    bouton.addEventListener("click", () => afficher(index));
+    dots.appendChild(bouton);
+  });
+
+  document.getElementById("leon-prev")
+    .addEventListener("click", () => afficher(current - 1));
+
+  document.getElementById("leon-next")
+    .addEventListener("click", () => afficher(current + 1));
+
+  afficher(0);
+})();
+</script>
+
+
 </body>
 </html>
