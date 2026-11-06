@@ -187,6 +187,7 @@
 
 
 
+
 <script>
 (() => {
   const pages = [
@@ -206,49 +207,36 @@
     ["Course au large · Jeu", "large-jeu.jpg"]
   ];
 
-  const img = document.getElementById("leon-gallery-image");
+  const image = document.getElementById("leon-gallery-image");
   const caption = document.getElementById("leon-gallery-caption");
   const dots = document.getElementById("leon-gallery-dots");
 
   let current = 0;
 
-  // Conserver une zone visible même si une image échoue
-  const message = document.createElement("p");
-  message.style.color = "#a33";
-  message.style.fontSize = "13px";
-  message.style.overflowWrap = "anywhere";
-  img.insertAdjacentElement("afterend", message);
-
-  img.style.display = "block";
-  img.style.opacity = "1";
-  img.style.visibility = "visible";
-
-  img.addEventListener("load", () => {
-    message.textContent = "";
-    img.style.opacity = "1";
-    img.style.visibility = "visible";
-  });
-
-  img.addEventListener("error", () => {
-    message.textContent = "Image introuvable : " + img.src;
-  });
-
   function afficher(index) {
     current = (index + pages.length) % pages.length;
 
     const [titre, fichier] = pages[current];
-    const adresse = new URL(
-      "galerie-leon/" + fichier,
-      window.location.origin + "/"
-    );
 
-    message.textContent = "";
+    const nouvelleImage = document.createElement("img");
+    nouvelleImage.id = "leon-gallery-image";
+    nouvelleImage.alt = "Extrait : " + titre;
+    nouvelleImage.style.cssText =
+      "display:block;width:100%;height:430px;object-fit:contain;";
+
+    nouvelleImage.src = "/galerie-leon/" + encodeURIComponent(fichier);
+
+    nouvelleImage.onerror = function () {
+      this.alt = "Impossible de charger : " + fichier;
+      console.error("Erreur image :", this.src);
+    };
+
+    const ancienneImage =
+      document.getElementById("leon-gallery-image");
+
+    ancienneImage.replaceWith(nouvelleImage);
+
     caption.textContent = titre;
-    img.alt = "Extrait : " + titre;
-    img.style.display = "block";
-    img.style.opacity = "1";
-    img.style.visibility = "visible";
-    img.src = adresse.href;
 
     [...dots.children].forEach((bouton, i) => {
       bouton.setAttribute(
@@ -277,6 +265,7 @@
   afficher(0);
 })();
 </script>
+
 
 
 
