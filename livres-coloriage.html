@@ -213,7 +213,7 @@
 
   function afficher(index) {
     current = (index + pages.length) % pages.length;
-    image.src = "galerie-leon/" + pages[current][1];
+    image.src = "/galerie-leon/" + pages[current][1];
     image.alt = "Extrait : " + pages[current][0];
     caption.textContent = pages[current][0];
 
