@@ -186,8 +186,9 @@
   <script src="script.js"></script>
 
 
+
 <script>
-(function () {
+(() => {
   const pages = [
     ["France · Coloriage", "france.jpg"],
     ["France · Jeu", "france-jeu.jpg"],
@@ -205,17 +206,49 @@
     ["Course au large · Jeu", "large-jeu.jpg"]
   ];
 
-  let current = 0;
-
-  const image = document.getElementById("leon-gallery-image");
+  const img = document.getElementById("leon-gallery-image");
   const caption = document.getElementById("leon-gallery-caption");
   const dots = document.getElementById("leon-gallery-dots");
 
+  let current = 0;
+
+  // Conserver une zone visible même si une image échoue
+  const message = document.createElement("p");
+  message.style.color = "#a33";
+  message.style.fontSize = "13px";
+  message.style.overflowWrap = "anywhere";
+  img.insertAdjacentElement("afterend", message);
+
+  img.style.display = "block";
+  img.style.opacity = "1";
+  img.style.visibility = "visible";
+
+  img.addEventListener("load", () => {
+    message.textContent = "";
+    img.style.opacity = "1";
+    img.style.visibility = "visible";
+  });
+
+  img.addEventListener("error", () => {
+    message.textContent = "Image introuvable : " + img.src;
+  });
+
   function afficher(index) {
     current = (index + pages.length) % pages.length;
-    image.src = "/galerie-leon/" + pages[current][1];
-    image.alt = "Extrait : " + pages[current][0];
-    caption.textContent = pages[current][0];
+
+    const [titre, fichier] = pages[current];
+    const adresse = new URL(
+      "galerie-leon/" + fichier,
+      window.location.origin + "/"
+    );
+
+    message.textContent = "";
+    caption.textContent = titre;
+    img.alt = "Extrait : " + titre;
+    img.style.display = "block";
+    img.style.opacity = "1";
+    img.style.visibility = "visible";
+    img.src = adresse.href;
 
     [...dots.children].forEach((bouton, i) => {
       bouton.setAttribute(
@@ -225,12 +258,12 @@
     });
   }
 
-  pages.forEach((page, index) => {
+  pages.forEach(([titre], index) => {
     if (index % 2 !== 0) return;
 
     const bouton = document.createElement("button");
     bouton.type = "button";
-    bouton.textContent = page[0].split(" · ")[0];
+    bouton.textContent = titre.split(" · ")[0];
     bouton.addEventListener("click", () => afficher(index));
     dots.appendChild(bouton);
   });
@@ -244,6 +277,7 @@
   afficher(0);
 })();
 </script>
+
 
 
 </body>
