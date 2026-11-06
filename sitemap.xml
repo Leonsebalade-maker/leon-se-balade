@@ -27,4 +27,11 @@
   <url>
     <loc>https://leonsebalade.com/conseils-astuces.html</loc>
   </url>
+  
+<url>
+  <loc>https://leonsebalade.com/livres-coloriage.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
 </urlset>
