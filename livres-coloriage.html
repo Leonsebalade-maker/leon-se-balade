@@ -224,7 +224,7 @@
     nouvelleImage.style.cssText =
       "display:block;width:100%;height:430px;object-fit:contain;";
 
-    nouvelleImage.src = "/galerie-leon/" + encodeURIComponent(fichier);
+  nouvelleImage.src = "https://leonsebalade-maker.github.io/leon-se-balade/galerie-leon/" + encodeURIComponent(fichier);
 
     nouvelleImage.onerror = function () {
       this.alt = "Impossible de charger : " + fichier;
