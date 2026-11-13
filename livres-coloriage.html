@@ -40,7 +40,7 @@
     .noel-offer strong {display:block;font-size:clamp(18px,3vw,24px);margin:4px 0}
     .noel-offer small {display:block;color:#52643d}
     .book-card.noel-discount {position:relative}
-    .book-card.noel-discount::before {content:"Offre de Noël";position:absolute;top:12px;right:12px;z-index:2;padding:7px 11px;border-radius:999px;background:#e8ebd9;color:#405332;border:1px solid #bdcaa9;font-size:12px;font-weight:700;box-shadow:0 2px 7px #0002}
+    .book-card.noel-discount::before {content:"Promo 5–20 déc.";position:absolute;top:12px;right:12px;z-index:2;padding:7px 11px;border-radius:999px;background:#e8ebd9;color:#405332;border:1px solid #bdcaa9;font-size:12px;font-weight:700;box-shadow:0 2px 7px #0002}
     .amazon-button {display:inline-flex; align-items:center; justify-content:center; gap:5px; align-self:center; margin-top:12px; padding:9px 13px; border-radius:999px; background:#637d57; color:#fff; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; transition:background .2s;}
     .amazon-button:hover, .amazon-button:focus-visible {background:#405838; color:#fff;}
     .book-tag {font-size: .85rem; font-weight: 700; color: #637d57; margin-bottom: 12px;}
@@ -231,9 +231,9 @@
 
     </section>
     <div id="noel-offer" class="noel-offer" role="note" aria-label="Offre spéciale Noël" hidden>
-      <span>🎁 PETIT CADEAU DE NOËL</span>
-      <strong>4 livres à prix réduit sur Amazon !</strong>
-      <small>Du 5 au 20 décembre 2026 · Découvrez les 4 aventures concernées ci-dessous.</small>
+      <span>🎄 NOËL APPROCHE CHEZ LÉON !</span>
+      <strong id="noel-offer-title">4 livres en promotion du 5 au 20 décembre uniquement !</strong>
+      <small id="noel-offer-detail">Offre à venir sur Amazon · Découvrez les 4 aventures concernées ci-dessous.</small>
     </div>
     <section class="section section-tint" aria-label="Collection de livres de coloriage">
       <div class="books-grid">
@@ -295,9 +295,15 @@
     (function () {
       // Date du jour en France, indépendamment du fuseau horaire du visiteur.
       var today = new Intl.DateTimeFormat('en-CA', {timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-      if (today < '2026-12-05' || today > '2026-12-20') return;
+      if (today > '2026-12-20') return;
       var offer = document.getElementById('noel-offer');
       if (offer) {offer.hidden = false; offer.classList.add('is-visible');}
+      if (today >= '2026-12-05') {
+        var title = document.getElementById('noel-offer-title');
+        var detail = document.getElementById('noel-offer-detail');
+        if (title) title.textContent = '4 livres à prix réduit sur Amazon !';
+        if (detail) detail.textContent = 'Offre du 5 au 20 décembre uniquement · Découvrez les 4 aventures concernées ci-dessous.';
+      }
       var discounted = ['B0HNT6MJHD','B0HPZ6Z613','B0HQ7CWG47','B0HQY2DK57'];
       document.querySelectorAll('.book-card').forEach(function (card) {
         var link = card.querySelector('a.amazon-button');
