@@ -33,6 +33,14 @@
     .book-cover {display:block; width:100%; height:auto; aspect-ratio: 2 / 3; object-fit:contain; margin-bottom:20px; border-radius:8px;}
     .book-card h2 {font-family: 'Playfair Display', serif; font-size: 1.45rem; margin: 0 0 12px;}
     .book-card p {line-height: 1.7; flex-grow: 1;}
+
+    /* Offre de Noël : affichage limité du 5 au 20 décembre 2026 */
+    .noel-offer {display:none;max-width:780px;margin:22px auto 10px;padding:17px 22px;border:1px solid #c5cfb3;border-radius:18px;background:#e8ebd9;color:#3f5131;text-align:center;box-shadow:0 5px 16px rgba(54,72,40,.08)}
+    .noel-offer.is-visible {display:block}
+    .noel-offer strong {display:block;font-size:clamp(18px,3vw,24px);margin:4px 0}
+    .noel-offer small {display:block;color:#52643d}
+    .book-card.noel-discount {position:relative}
+    .book-card.noel-discount::before {content:"Offre de Noël";position:absolute;top:12px;right:12px;z-index:2;padding:7px 11px;border-radius:999px;background:#e8ebd9;color:#405332;border:1px solid #bdcaa9;font-size:12px;font-weight:700;box-shadow:0 2px 7px #0002}
     .amazon-button {display:inline-flex; align-items:center; justify-content:center; gap:5px; align-self:center; margin-top:12px; padding:9px 13px; border-radius:999px; background:#637d57; color:#fff; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; transition:background .2s;}
     .amazon-button:hover, .amazon-button:focus-visible {background:#405838; color:#fff;}
     .book-tag {font-size: .85rem; font-weight: 700; color: #637d57; margin-bottom: 12px;}
@@ -222,6 +230,11 @@
 <p>Envie d'un livre de coloriage pour enfants qui change un peu ? Embarque avec Léon, notre camping-car aventurier ! À travers des dessins à colorier, des jeux et des activités amusantes, les enfants découvrent des pays, des paysages et des traditions tout en laissant libre cours à leur imagination.</p>
 
     </section>
+    <div id="noel-offer" class="noel-offer" role="note" aria-label="Offre spéciale Noël" hidden>
+      <span>🎁 PETIT CADEAU DE NOËL</span>
+      <strong>4 livres à prix réduit sur Amazon !</strong>
+      <small>Du 5 au 20 décembre 2026 · Découvrez les 4 aventures concernées ci-dessous.</small>
+    </div>
     <section class="section section-tint" aria-label="Collection de livres de coloriage">
       <div class="books-grid">
         <article class="book-card"><img class="book-cover" src="couvertures-livres/livre-france.jpg" alt="Couverture du livre Léon découvre la France, coloriages et jeux pour enfants de 5 à 7 ans" loading="lazy"><div class="book-tag">Coloriages et jeux • 5–7 ans</div><h2>Léon découvre la France</h2><p>De Paris à la Bretagne, Léon n’en fait qu’à sa tête ! Entre grimaces, châteaux et rencontres rigolotes, prépare tes crayons : ça va déménager !</p><a class="amazon-button" href="https://www.amazon.fr/dp/B0HNSWWT28" target="_blank" rel="noopener noreferrer" aria-label="Découvrir ce livre sur Amazon">Découvrir sur Amazon ↗</a></article>
@@ -277,6 +290,23 @@
     <a class="brand footer-brand" href="index.html#accueil"><span class="brand-mark">L</span><span><strong>Léon</strong><small>se balade</small></span></a>
     <div class="footer-text"><p>Les souvenirs ont parfois plusieurs vies.</p><p>© Léon se balade — Tous droits réservés.</p></div>
   </footer>
+
+  <script>
+    (function () {
+      // Date du jour en France, indépendamment du fuseau horaire du visiteur.
+      var today = new Intl.DateTimeFormat('en-CA', {timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+      if (today < '2026-12-05' || today > '2026-12-20') return;
+      var offer = document.getElementById('noel-offer');
+      if (offer) {offer.hidden = false; offer.classList.add('is-visible');}
+      var discounted = ['B0HNT6MJHD','B0HPZ6Z613','B0HQ7CWG47','B0HQY2DK57'];
+      document.querySelectorAll('.book-card').forEach(function (card) {
+        var link = card.querySelector('a.amazon-button');
+        if (link && discounted.some(function(id){return link.href.indexOf(id) !== -1;})) {
+          card.classList.add('noel-discount');
+        }
+      });
+    }());
+  </script>
   <script src="script.js"></script>
 
 
